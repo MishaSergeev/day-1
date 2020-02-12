@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+    <p>Перед скриптом...</p>
+    <script>
+        //day, month, year - текущая дата
+        //day1, month1, year1 - вчерашняя дата
+
+        let day = prompt('укажите день', '');
+        let month = prompt('укажите месяц', '');
+        let year = prompt('укажите год', '');
+
+        let day1 = 0;
+        let month1 = 0;
+        let year1 = 0;
+
+        if (day == 01 & month== 05 || day==01 & month==07 || day==01 & month==08 || day==01 & month==10 || day==01 & (month==12)) {
+        day1 = 30; 
+        month1 = month - 1;
+        year1 = year;
+        alert(day1,month1,year1);
+        }else {
+            if (day == 01 & month== 02 || day==01 & month==04 || day==01 & month==06 || day==01 & month==09 || day==01 & month==011) {
+            day1 = 31;
+            month1 = month - 1;
+            year1 = year;
+            }else {
+                if (day == 01 & month== 04) { day1 == 31, month1 == 12, year1 == year - 1; }
+			else {
+                    if (day == 01 & month== 03 & year % 4==0) {
+                    day1 = 29;
+                    month1 = month - 1;
+                    year1 = year;
+                    }else {
+                        if (day == 01 & month== 03 & year % 4 == 0) {
+                        day1 = 28;
+                        month1 = month - 1;
+                        yyear1 = year;
+                        }else {
+                            if (day == 01 & month== 03 & year % 4 !== 0) {
+                            day1 = 29; 
+                            month1 = month - 1;
+                            year1 = year;
+                            }else { 
+                                if (day == 01 & month== 01) {
+                                    day1 = 31; 
+                                    month1 = 12;
+                                    year1 =year-1;
+                                }
+                                else{
+                                day1 = day - 1;
+                                month1 = month;
+                                year1 = year;
+                                }
+                                }
+                        }
+                    }
+                }
+            }
+        }
+        
+        alert(day1);
+        alert(month1);
+        alert(year1);
+
+    </script>
+    <p>...После скрипта.</p>
+</body>
+
+</html>
